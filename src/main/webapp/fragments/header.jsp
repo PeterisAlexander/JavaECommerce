@@ -1,37 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/header_style.css"/>
 
-
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-	crossorigin="anonymous">
-
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<header class="mb-5">
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#">SHOPSETTE*</a>
-			<button class="navbar-toggler" type="button"
-				data-bs-toggle="collapse" data-bs-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="#">Dashboard</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="ListUserServlet">User</a></li>
-					<li class="nav-item"><a class="nav-link" href="ListProductServlet">Product</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-</header>
+<div class="menu">
+        <ul>
+            <a id="logo" href="#logo"><img id="img_logo" src="${pageContext.request.contextPath}/assets/images/page_login/logo_shopsette.png"" alt="logo">
+                ShopSette</a>
+            <div class="links">
+                <li id="link_center"><a href="HomeServlet">Accueil</a></li>
+                <li id="link_center"><a href="#news">Nouveautés</a></li>
+                <li id="link_center"><a href="#contact">Contact</a></li>
+            </div>
+            <div>
+                <li class="dropdown">
+                    <span class="dropbtn" id="name">${user.name}</span>
+                    <div class="dropdown-content">
+                        <a href="#">Profile</a>
+                        <a href="#Panier">Panier <span class="badge">5</span></a>
+                        <a href="LoginServlet">Déconnexion</a>
+                    </div>
+                </li>
+            </div>
+        </ul>
+    </div>

@@ -1,0 +1,264 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../assets/fonts/Nunito_Sans/NunitoSans-Light.ttf");
+}
+
+@font-face {
+  font-family: "Nunito Sans Regular";
+  src: url("../assets/fonts/Nunito_Sans/NunitoSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Nunito Sans Bold";
+  src: url("../assets/fonts/Nunito_Sans/NunitoSans-Bold.ttf");
+}
+
+* {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/****** Logo Left ******/
+.rectLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: #e6e7ee;
+  background-image: url("../assets/images/page_login/neumorphism_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 6px 6px 12px #a1a2a7;
+  z-index: 1;
+}
+
+img {
+  text-align: center;
+  height: auto;
+  width: 45%;
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+  color: #707070;
+  margin: 50px 0px;
+}
+
+a {
+  display: block;
+  position: absolute;
+  bottom: -15%;
+  text-decoration: none;
+}
+
+.btn {
+  position: relative;
+  transition: all 0.2s ease;
+  letter-spacing: 0.025em;
+  font-size: 2rem;
+  font-weight: 400;
+  border-radius: 5rem;
+  border: solid 0.5px #d1d9e6;
+  box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+  padding: 1rem 3rem;
+  background-color: #4a61ff;
+  color: white;
+}
+
+.btn:hover {
+  border-radius: 5rem;
+  color: #31344b;
+  background: #e6e7ee;
+  box-shadow: inset 2.5px 2.5px 5px #a1a2a7, inset -2.5px -2.5px 5px #ffffff;
+}
+
+/****** Formulaire Right ******/
+.rectRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: #e6e7ee;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #707070;
+}
+
+h4 {
+  color: #707070;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.icons {
+  margin: 20px;
+}
+
+i {
+  color: #818181;
+  border: solid 0.5px #818181;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  padding: 5px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.login {
+  position: absolute;
+  top: inherit;
+  text-align: center;
+}
+
+.formulaire {
+  display: grid;
+  justify-items: center;
+}
+
+input[type="button"] , input[type="submit"]{
+  transition: all 0.2s ease;
+  letter-spacing: 0.025em;
+  font-weight: 400;
+  border-radius: 5rem;
+  border: solid 0.5px #d1d9e6;
+  box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+  padding: 1rem 3rem;
+  background-color: #4a61ff;
+  color: white;
+}
+
+input[type="button"]:hover , input[type="submit"]:hover{
+  border-radius: 5rem;
+  color: #31344b;
+  background: #e6e7ee;
+  box-shadow: inset 2.5px 2.5px 5px #a1a2a7, inset -2.5px -2.5px 5px #ffffff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  font-size: 1.5rem;
+  width: 400px;
+  padding: 10px 15px;
+  border: none;
+  box-shadow: inset 4px 4px 8px #b8b9be, inset -2px -2px 4px #ffffff;
+  text-decoration: none;
+  border-radius: 0px 10px 10px 0px;
+  background-color: #e6e7ee;
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+  margin: 20px 0px 40px 0px;
+}
+
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.75rem;
+  color: #44476a;
+  border: 1px solid #d1d9e6;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+
+.btn-eye, .btn-randomPass {
+  color: darkgrey;
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.btn-randomPass:hover, .btn-eye:hover {
+  color: black;
+}
+
+.btn-randomPass {
+  display: block;
+  font-size: 1.25rem;
+  margin: -20px auto 20px auto;
+}
+
+.notification {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #e6e7ee;
+  border: 1px solid #D1D9E6;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  font-size: .875rem;
+  width: 25%;
+  z-index: 1;
+  animation-name: notifSlideRight;
+  animation-duration: 1s;
+}
+
+.notification-success {
+  color: #18634B;
+}
+
+.notification-failed {
+  color: #a91e2c;
+}
+
+.alert-inner--icon {
+  font-size: 1.25rem;
+  margin-right: 0.375rem;
+}
+
+.alert-inner--text {
+  display: inline-block;
+}
+
+.close {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  padding: 0;
+  transform: translateY(-50%);
+  color: #31344b;
+  opacity: 1;
+  cursor: pointer;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+
+@keyframes notifSlideRight {
+  0% {
+    transform: translateX(2000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -1,2 +1,1 @@
-# javaecommerce
-# javaecommerce
+# Projet Java JSP Servlet E-commerce

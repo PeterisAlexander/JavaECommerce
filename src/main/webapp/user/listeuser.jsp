@@ -9,7 +9,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ include file="../fragments/header.jsp" %>
 <main class="container">
 <h3>Liste des utilisateurs</h3>
 
